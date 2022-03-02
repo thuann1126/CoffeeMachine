@@ -1,16 +1,16 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+"""
+Project: Coffee Machine
+Author: Thuan Nguyen
+Skill sets: OOP,
+Last modified: March 1, 2022
+"""
+from order import Order
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    order = Order()
+    order.annoucement()
+    order.makeOrder()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
