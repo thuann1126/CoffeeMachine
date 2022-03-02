@@ -59,12 +59,11 @@ class Retailler():
     }
 
     MONEYTRAY ={
-        "fiveCent": 5,
-        "tenCent": 5,
-        "twentyCent": 2,
-        "fiftyCent": 5,
-        "oneDollar": 5,
-        "twoDollar": 2,
+        "credit": 20.00
+    }
+
+    ADMINACCOUNTS = {
+
     }
 
 
