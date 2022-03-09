@@ -1,8 +1,10 @@
 #This file contain order and purchase information and functions
 
 from retailler import Retailler
+from makingProcess import MakingProcess
 
 menu = Retailler()
+
 
 class Order():
 
@@ -19,10 +21,10 @@ class Order():
 
         while purchaseChecker ==False:
             try:
-                userPayment = int(input("Enter your paying amount: "))
+                userPayment = float(input("Enter your paying amount: "))
                 credit += userPayment
             except Exception:
-                print("Please enter integer only...")
+                print("Please enter floating number only...")
                 continue
             if(credit < total):
                 print("Your payment is not enough please insert more money")
@@ -57,6 +59,7 @@ class Order():
             if(completedOrer == "no"):
                 print("\n your order is completed")
                 self.purchase(orders)
+                MakingProcess(orders)
                 orderChecker = True
                 break
 

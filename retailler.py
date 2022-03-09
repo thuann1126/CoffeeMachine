@@ -63,7 +63,7 @@ class Retailler():
     }
 
     ADMINACCOUNTS = {
-
+        "ceo123": "Ceo123"
     }
 
 

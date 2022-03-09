@@ -46,7 +46,7 @@ if __name__ == '__main__':
             order.makeOrder()
 
         elif userInput == "login":
-            controller = True
+            admin.login()
 
         elif userInput == "cancel":
             print("Thank you! See you soon!")
