@@ -37,10 +37,10 @@ if __name__ == '__main__':
     order = Order()
     admin = Management()
     controller = False
-
     annoucement()
 
     while controller == False:
+
         userInput = input("Enter your command: ")
         if userInput == "order":
             order.makeOrder()

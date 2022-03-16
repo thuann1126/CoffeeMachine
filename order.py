@@ -4,7 +4,8 @@ from retailler import Retailler
 from makingProcess import MakingProcess
 
 menu = Retailler()
-
+orders = []
+mkprocess = MakingProcess(orders)
 
 class Order():
 
@@ -39,7 +40,7 @@ class Order():
     # make order, ask input, return orders list, annoucement
     def makeOrder(self):
 
-        orders = []
+
         orderChecker = False
 
         #Checking the order
@@ -56,16 +57,25 @@ class Order():
             print(orders)
             print("Would you like to add anything? (yes/no)")
             completedOrer = input()
-            if(completedOrer == "no"):
-                print("\n your order is completed")
-                self.purchase(orders)
-                MakingProcess(orders)
-                orderChecker = True
-                break
 
-            if(completedOrer == "yes"):
+            if(completedOrer == "no"):
+
+                if mkprocess.processOrder() == True:
+                    print("\n your order is completed")
+                    self.purchase(orders)
+                else:
+                    print("Your order is canceled because the machine is out of stock.")
+                    orders.clear()
+
+                orderChecker = True
+
+            elif(completedOrer == "yes"):
                 print("\n add to your order")
                 continue
+
+            elif(completedOrer == "back"):
+                print("Go back to the main menu.")
+                break
             else:
                 print("\nYour input is invalid please add an item")
 
